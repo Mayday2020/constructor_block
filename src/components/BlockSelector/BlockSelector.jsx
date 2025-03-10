@@ -6,7 +6,9 @@ const BlockSelector = () => {
   const dispatch = useDispatch();
 
   // TODO: Реализуйте логику добавления блока
-  const handleAddBlock = (type) => {};
+  const handleAddBlock = (type) => {
+    type && dispatch(addBlock(type))
+  };
 
   // TODO: Реализуйте логику получения начального содержимого
   const getInitialContent = (type) => {

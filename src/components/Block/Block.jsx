@@ -4,7 +4,7 @@ import {
   updateBlock,
   removeBlock,
   moveBlockUp,
-  moveBlockDown,
+  moveBlockDown, clearBlocks,
 } from "../../store/slices/blocksSlice";
 import EditorModal from "../EditorModal/EditorModal";
 import styles from "./Block.module.scss";
@@ -24,13 +24,23 @@ const Block = ({ block, isFirst, isLast }) => {
   const handleSave = (newData) => {};
 
   // TODO: Реализовать функцию удаления блока
-  const handleDelete = () => {};
+  const handleDelete = () => {
+    if (window.confirm("Вы уверены, что хотите удалить этот блок?")) {
+      dispatch(removeBlock(block))
+    }
+  };
 
   // TODO: Реализовать функцию перемещения блока вверх
-  const handleMoveUp = () => {};
+  const handleMoveUp = () => {
+    console.log('up')
+    dispatch(moveBlockUp(block))
+  };
 
   // TODO: Реализовать функцию перемещения блока вниз
-  const handleMoveDown = () => {};
+  const handleMoveDown = () => {
+    console.log('down')
+    dispatch(moveBlockDown(block))
+  };
 
   // TODO: Реализовать функцию обработки изменения ответа
   const handleAnswerChange = (index, checked) => {};

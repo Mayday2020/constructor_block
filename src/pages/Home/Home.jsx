@@ -4,6 +4,7 @@ import BlockSelector from "../../components/BlockSelector/BlockSelector";
 import Block from "../../components/Block/Block";
 import styles from "./Home.module.scss";
 
+
 const Home = () => {
   const blocks = useSelector((state) => state.blocks.blocks);
   const dispatch = useDispatch();
