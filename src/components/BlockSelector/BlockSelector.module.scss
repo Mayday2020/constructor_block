@@ -1,0 +1,67 @@
+.blockSelector {
+  width: 250px;
+  min-width: 250px;
+  height: 100vh;
+  background-color: white;
+  padding: 20px;
+  border-right: 1px solid #e0e0e0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+
+    &:hover {
+      background: #555;
+    }
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    button {
+      width: 100%;
+      text-align: left;
+      background-color: #f8f9fa;
+      color: #333;
+      border: 1px solid #dee2e6;
+      padding: 12px;
+      transition: all 0.2s;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &:hover {
+        background-color: #e9ecef;
+        border-color: #ced4da;
+        transform: translateX(5px);
+      }
+
+      &:active {
+        transform: translateX(2px);
+      }
+    }
+  }
+}
