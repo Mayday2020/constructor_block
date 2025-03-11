@@ -12,7 +12,6 @@ const BlockSelector = () => {
 
   // TODO: Реализуйте логику получения начального содержимого
   const getInitialContent = (type) => {
-    return {};
   };
 
   return (
